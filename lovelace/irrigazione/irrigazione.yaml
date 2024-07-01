@@ -1,0 +1,41 @@
+title: Irrigazione
+views:
+  - !include ./view_garden_irrigation.yaml
+  - title: Interruttori
+    theme: Backend-selected
+    icon: mdi:dip-switch
+    path: interruttori
+    badges: []
+    cards:
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: valve.giardino_2
+            tap_action:
+              action: toggle
+            show_state: true
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: valve.siepi
+            tap_action:
+              action: toggle
+            show_state: true
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: valve.giardino_1
+            tap_action:
+              action: toggle
+            show_state: true
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: valve.orto
+            tap_action:
+              action: toggle
+            show_state: true

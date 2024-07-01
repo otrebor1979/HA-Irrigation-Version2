@@ -18,15 +18,15 @@ entities:
           - !include
             - ../item_settings_select_button_with_icon.yaml
             - entity: input_boolean.irrigation_master_control_switch
-              on_name: "System is ON"
-              off_name: "System is OFF"
+              on_name: "Sistema ON"
+              off_name: "Sistema OFF"
 
           #=== IRRIGATION REMOTE CONTROL
           - !include
             - ../item_settings_select_button_with_icon.yaml
             - entity: input_boolean.irrigation_remote_control
-              on_name: "Remote Control is ON"
-              off_name: "Remote Control is OFF"
+              on_name: "Controllo remoto ON"
+              off_name: "Controllo remoto OFF"
               off_icon: mdi:remote-off
 
       #=== IRRIGATION TESTING MODE AND WARNING
@@ -37,8 +37,8 @@ entities:
           - !include
             - ../item_settings_select_button_with_icon.yaml
             - entity: input_boolean.irrigation_testing_mode
-              on_name: "Test Mode is ON"
-              off_name: "Test Mode is OFF"
+              on_name: "Modalità Test ON"
+              off_name: "Modalità Test OFF"
 
           #=== TESTING MODE WARNING
           - !include
@@ -47,23 +47,23 @@ entities:
                 name: 'Warning! Testing mode converts run<br>times from minutes to seconds'
 
       #=== IRRIGATION LOGGING
-      - type: horizontal-stack
-        cards:
-          - !include
-            - ../item_settings_check_box_with_entity_icon.yaml
-            - entity: input_boolean.logging_irrigation
-              name: Logging
-              on_icon: mdi:notebook-check
-              off_icon: mdi:notebook-remove-outline
+    #  - type: horizontal-stack
+    #    cards:
+    #      - !include
+    #        - ../item_settings_check_box_with_entity_icon.yaml
+    #        - entity: input_boolean.logging_irrigation
+    #          name: Logging
+    #          on_icon: mdi:notebook-check
+    #          off_icon: mdi:notebook-remove-outline
 
-          - !include
-            - ../item_settings_check_box_with_entity_icon.yaml
-            - entity: input_boolean.logging_irrigation_clear_log
-              name: Clear log at midnight
-              on_icon: mdi:notebook-outline
-              off_icon: mdi:notebook
-              double_tap_action: call-service
-              double_tap_action_service: shell_command.logging_my_log_irrigation_clear
+    #      - !include
+    #        - ../item_settings_check_box_with_entity_icon.yaml
+    #        - entity: input_boolean.logging_irrigation_clear_log
+    #          name: Clear log at midnight
+    #          on_icon: mdi:notebook-outline
+    #          off_icon: mdi:notebook
+    #          double_tap_action: call-service
+    #          double_tap_action_service: shell_command.logging_my_log_irrigation_clear
 
       #=== NOTIFY USERS
       - !include item_settings_notify_users.yaml
@@ -114,18 +114,18 @@ entities:
       #-------------------------
 
       #=== CONTROLLER WIFI SIGNAL
-      - type: custom:config-template-card
-        variables:
-          CONTROLLER: states['input_text.irrigation_external_sensor_controller_wifi'].state
-        entities:
-          - input_text.irrigation_external_sensor_controller_wifi
-          - ${states['input_text.irrigation_external_sensor_controller_wifi'].state}
-          - input_text.irrigation_ui_font_family
-        card:
-          !include
-            - item_settings_controller_wifi_signal.yaml
-            - entity: "${CONTROLLER}"
-              name: Irrigation Controller
+    #  - type: custom:config-template-card
+    #    variables:
+    #      CONTROLLER: states['input_text.irrigation_external_sensor_controller_wifi'].state
+    #    entities:
+    #      - input_text.irrigation_external_sensor_controller_wifi
+    #      - ${states['input_text.irrigation_external_sensor_controller_wifi'].state}
+    #      - input_text.irrigation_ui_font_family
+    #    card:
+    #      !include
+    #        - item_settings_controller_wifi_signal.yaml
+    #        - entity: "${CONTROLLER}"
+    #          name: Irrigation Controller
 
       #=== TESTING MODE WARNING
       - !include

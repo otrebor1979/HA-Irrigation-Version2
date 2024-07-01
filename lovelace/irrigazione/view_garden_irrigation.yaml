@@ -1,7 +1,6 @@
-
-title: Garden Irrigation
+title: Centralina
 path: garden_irrigation
-icon: mdi:sprinkler-variant
+icon: mdi:watering-can
 # type: custom:horizontal-layout
 type: sections
 sections:
@@ -9,9 +8,7 @@ sections:
   #==================
   #=== SYSTEM STATUS
   #==================
-      - !include garden_irrigation/status/page_status.yaml
-
-
+    - !include garden_irrigation/status/page_status.yaml
   #===========
   #=== CYCLES 
   #===========
@@ -35,8 +32,6 @@ sections:
                   - cycle: 2
               cycle3:
                 !include garden_irrigation/cycles/section_cycle3_schedule.yaml
-
-
   #=============
   #=== SETTINGS
   #=============
@@ -44,7 +39,6 @@ sections:
       - type: vertical-stack
         cards:
           - !include garden_irrigation/settings/page_settings.yaml
-
           - type: custom:hui-element
             card_type: custom:state-switch
             entity: input_select.irrigation_settings
