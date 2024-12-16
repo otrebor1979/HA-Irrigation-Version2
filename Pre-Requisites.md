@@ -26,7 +26,7 @@ __Recorder.__ In order to show the irrigation times on the 'History' page you mu
 There are many ways to include and exclude domains and entities in Recorder but you need to ensure that the following sensors are included:
 
 
-`irrigation_sensor_zone1_switch`, `irrigation_sensor_zone2_switch`... `irrigation_sensor_zone16_switch`
+`irrigation_sensor_zone1_switch`, `irrigation_sensor_zone2_switch`, `irrigation_sensor_zone3_switch`, `irrigation_sensor_zone4_switch`
 
 Also there are *lot* of entities created by this package, many (most?) of which you can exclude from [Recorder](https://www.home-assistant.io/integrations/recorder/) in order to limit the DB size and processor time needed to record them.
 

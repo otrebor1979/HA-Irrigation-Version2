@@ -8,7 +8,7 @@ script:
   #=== Run a Single Zone On Demand
   #===
   #=== Passed
-  #===  zone  - [zone1, zone2, ... zone16]
+  #===  zone  - [zone1, zone2, zone3, zone4]
   #========================================
   irrigation_run_a_single_zone_on_demand:
     alias: Irrigation Run A Single Zone On Demand
@@ -48,18 +48,6 @@ script:
             - input_number.irrigation_cycle3_zone2_duration
             - input_number.irrigation_cycle3_zone3_duration
             - input_number.irrigation_cycle3_zone4_duration
-            - input_number.irrigation_cycle3_zone5_duration
-            - input_number.irrigation_cycle3_zone6_duration
-            - input_number.irrigation_cycle3_zone7_duration
-            - input_number.irrigation_cycle3_zone8_duration
-            - input_number.irrigation_cycle3_zone9_duration
-            - input_number.irrigation_cycle3_zone10_duration
-            - input_number.irrigation_cycle3_zone11_duration
-            - input_number.irrigation_cycle3_zone12_duration
-            - input_number.irrigation_cycle3_zone13_duration
-            - input_number.irrigation_cycle3_zone14_duration
-            - input_number.irrigation_cycle3_zone15_duration
-            - input_number.irrigation_cycle3_zone16_duration
 
       #=== Disable schedules for Cycles 1 and 2
       - service: input_boolean.turn_off

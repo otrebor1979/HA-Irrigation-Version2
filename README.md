@@ -133,7 +133,7 @@ But... I am by no means a Javascript or CSS programmer so there may well be thin
 Version 1 was designed around a Sonoff 4ch but for Version 2 I will use an 8 relay board controlled with an ESP32.
 This in itself should make little difference as ultimately all the package does is turn switches on and off.
 
-This package has been designed with two scheduled cycles per day with each cycle having up to 16 zones and all zones can be scheduled to run on any day(s) of the week.
+This package has been designed with two scheduled cycles per day with each cycle having up to 4 zones and all zones can be scheduled to run on any day(s) of the week.
 
 A manual cycle is also provided.
 

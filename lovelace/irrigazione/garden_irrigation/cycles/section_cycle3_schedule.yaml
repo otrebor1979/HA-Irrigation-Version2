@@ -93,85 +93,13 @@ entities:
         - cycle: 3
           zone: 4
 
-      #=== Zone 5
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 5
-
-      #=== Zone 6
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 6
-
-      #=== Zone 7
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 7
-
-      #=== Zone 8
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 8
-
-      #=== Zone 9
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 9
-
-      #=== Zone 10
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 10
-
-      #=== Zone 11
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 11
-
-      #=== Zone 12
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 12
-
-      #=== Zone 13
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 13
-
-      #=== Zone 14
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 14
-
-      #=== Zone 15
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 15
-
-      #=== Zone 16
-      - !include
-        - item_cycle_zone_duration_line.yaml
-        - cycle: 3
-          zone: 16
-
 card_mod:
   style: >
     ha-card {
       margin-top: -0.75em;
       margin-bottom: {% raw %}
       {% set no_of_zones = states('input_number.irrigation_number_of_zones') | int %}
-      {% set bottom_margin = ((16 - no_of_zones) / 2) * -1 %}
+      {% set bottom_margin = ((4 - no_of_zones) / 2) * -1 %}
       {{ bottom_margin }}em;
       {% endraw %}
     }

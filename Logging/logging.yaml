@@ -214,7 +214,7 @@ automation:
                       {{ repeat.item }}
 
       #=== Create Persistent notification for logs size
-      - service: script.notify
+      - action: persistent_notification.create
         data:
           show: True
           notification_id: logging_on_warning

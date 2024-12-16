@@ -16,7 +16,7 @@ script:
   #=== Set Tasmota Pulsetime if necessary
   #===
   #=== Passed
-  #===  zone  - [zone1, zone2, ... zone8]
+  #===  zone  - [zone1, zone2, ... zone4]
   #===  duration - in seconds
   #=======================================
   irrigation_tasmota_set_pulsetime:
